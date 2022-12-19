@@ -1,0 +1,282 @@
+:root {
+    --background: rgb(1, 1, 43);
+    --menora-color: rgb(98, 97, 94);
+}
+
+body {
+    background-color: var(--background);
+    overflow: hidden;
+    zoom: 110%;
+}
+
+.candle {
+    width: 40px;
+    height: 200px;
+    background-color: rgb(255, 223, 148);
+    border-radius: 11px 11px 0px 0px;
+    position: relative;
+    z-index: 13;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+
+  }
+  
+  .candle::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 35px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: rgb(29, 18, 18);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -18%;
+    z-index: 1;
+    box-shadow: 0px 0px 37px 37px #ff550018;
+    animation: shadow 0.1s infinite alternate;
+  }
+  
+  .candle::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 81px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -140px;
+    border-radius: 4000% 4000% 1005px 1005px;
+    background-image: linear-gradient(360deg, #ff2300, #ff9800);
+    border: 3px solid #ff9800;
+    box-shadow: 0px 0px 37px 37px #ff530030;
+    animation: light 2s linear 2s infinite alternate;
+  }
+
+.drop {
+    position: absolute;
+    z-index: -2;
+    left: -3px;
+    top: 0%;
+    width: 14px;
+    height: 20px;
+    background-color: rgb(255, 223, 148);;
+    border-radius: 100px;
+    animation: drop 5s infinite;
+}
+
+@keyframes shadow {
+    from {
+        box-shadow: 0px 0px 37px 37px #ff550018;
+    }
+    to {
+        box-shadow: 0px 0px 37px 50px #ff550021;
+    }
+}
+
+@keyframes drop {
+    0% {
+        top: 0%;
+        left: -3px;
+    }
+    25% {
+        top: 66%;
+        left: 0px;
+    }
+    50% {
+        top: 66%;
+        left: 0px;
+    }
+    75% {
+        top: 66%;
+        left: 0px;
+    }
+    100% {
+        top: 66%;
+        left: 0px;
+    }
+}
+
+@keyframes light {
+    0%   {
+        width: 26px;
+        border-radius: 4000% 4000% 1005px 1005px;
+        background-image: linear-gradient(360deg, #ff2300, #ff9800);
+    }
+    25%  {
+        width: 27px;
+        border-radius: 4300% 3800% 805px 1005px;
+        background-image: linear-gradient(340deg, #e82204, #ff9800);
+    }
+    50%  {
+        width: 26px;
+        border-radius: 4000% 4000% 1005px 805px;
+        background-image: linear-gradient(360deg, #ff2300, #ffa927);
+    }
+    75%  {
+        width: 22px;
+        border-radius: 3800% 4300% 1005px 805px;
+        background-image: linear-gradient(-20deg, #ff2300, #ff9800);
+    }
+    100% {
+        width: 26px;
+        border-radius: 4000% 4000% 1005px 805px;
+
+    }
+  }
+
+
+  /* menora */
+
+.menora_container {
+  
+}
+
+.main {
+    width: 30px;
+    height: 520px;
+    box-sizing: border-box;
+    background-color: var(--menora-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 1;
+}
+
+.bottom {
+    width: 300px;
+    height: 200px;
+    background-color: var(--menora-color);
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 500px;
+}
+
+.menora_stick {
+    margin: auto;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40%;
+}
+
+.a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;    
+    bottom: 250px;
+
+    width: 500px;
+    height: 500px;
+    background-color: var(--menora-color);
+}
+
+.b {
+    width: 450px;
+    height: 450px;
+    background-color: var(--background);;
+}
+
+.c {
+    width: 400px;
+    height: 400px;
+    background-color: var(--menora-color);
+}
+
+.d {
+    width: 350px;
+    height: 350px;
+    background-color: var(--background);;
+}
+
+.e {
+    width: 300px;
+    height: 300px;
+    background-color: var(--menora-color);
+}
+
+.f {
+    width: 250px;
+    height: 250px;
+    background-color: var(--background);;
+}
+
+.g {
+    width: 200px;
+    height: 200px;
+    background-color: var(--menora-color);
+}
+
+.h {
+    width: 150px;
+    height: 150px;
+    background-color: var(--background);;
+}
+
+.background {
+    background-color: var(--background);;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translatex(-50%);
+    overflow-y: visible;
+    bottom: 500px;
+    z-index: 1;
+}
+
+.right, .left {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    flex-basis: 40%;
+}
+
+.middle {
+    flex-shrink: 0;
+    flex-basis: 20%;
+    background-color: var(--background);;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.middle .candle {
+    zoom: 70%;
+    bottom: 20px;
+}
+
+.left {
+    display: flex;
+    align-items: flex-end;
+}
+
+.left .candle {
+    left: 0;
+    display: inline-block;    
+    zoom: 70%;
+}
+
+.right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.right .candle {
+    left: 40px;
+    display: inline-block;    
+    zoom: 70%;
+}
