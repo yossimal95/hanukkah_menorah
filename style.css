@@ -280,3 +280,20 @@ body {
     display: inline-block;    
     zoom: 70%;
 }
+
+.cover {
+    width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300px;
+    position: absolute;
+    bottom: -300px;
+    background-color: var(--background);
+}
+
+@media screen and (max-width: 600px) {
+    body {      
+        zoom: 50%;
+        height: 100vh;
+    }
+}
