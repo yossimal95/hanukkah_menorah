@@ -72,5 +72,15 @@
         </div>
     </div>
     <div class="cover"></div>
+
+    <script>
+        let animationClasses = [5,3,7,12];
+
+        document.querySelectorAll('.drop').forEach((drop, index)=>{
+            drop.classList.add(
+                'drop_' + animationClasses[Math.floor(Math.random() * animationClasses.length)]
+            );
+        });
+    </script>
 </body>
 </html>
